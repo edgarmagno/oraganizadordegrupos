@@ -103,12 +103,14 @@ export default function App() {
             ? reformatGuestName(updated.formattedName, nameCasing)
             : g.formattedName;
 
+        const status: 'valid' | 'missing_apto' = newApto && newFormattedName ? 'valid' : 'missing_apto';
+
         return {
           ...g,
           ...updated,
           apto: newApto,
           formattedName: newFormattedName,
-          status: newApto && newFormattedName ? 'valid' : 'missing_apto',
+          status,
         };
       });
 

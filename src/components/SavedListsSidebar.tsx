@@ -34,7 +34,8 @@ export const getStoredLists = (): SavedList[] => {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return [];
-    return JSON.parse(raw);
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
   } catch (err) {
     console.error('Erro ao ler listas salvas do localStorage:', err);
     return [];
