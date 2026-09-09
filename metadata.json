@@ -1,0 +1,6 @@
+{
+  "name": "Organizador de Lista de Grupos",
+  "description": "Processamento de listas Excel de hóspedes por apartamento, reorganização de nomes, ordenação por apto e geração de PDF impresso otimizado sem datas de check-in/check-out.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
